@@ -10,6 +10,9 @@ RUN pip install mapboxgl psycopg2 geopandas
 # Install mapping services
 RUN pip install openrouteservice
 
+# Install plotting librariers
+RUN pip install matplotlib
+
 # Install additional ML tools
 RUN pip install TextBlob TextBlob-de
 

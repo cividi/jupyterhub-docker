@@ -28,7 +28,8 @@ RUN jupyter serverextension enable --py jupyterlab_templates
 
 # Add JS support
 RUN npm install -g ijavascript
-RUN ijsinstall --ijs-install=global
+RUN ijsinstall 
+#Deprecated: --ijs-install=global
 
 # stae SDK
 RUN npm install stae -g

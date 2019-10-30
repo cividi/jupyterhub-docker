@@ -9,6 +9,11 @@ RUN pip install mapboxgl psycopg2-binary geopandas
 
 # Install mapping services
 RUN pip install openrouteservice
+RUN pip install folium
+
+# Install frictionless data toolchain
+RUN pip install dataflows
+RUN npm install -g data-cli
 
 # Install plotting librariers
 RUN pip install matplotlib

@@ -26,6 +26,10 @@ RUN pip install jupyterlab_templates
 RUN jupyter labextension install jupyterlab_templates
 RUN jupyter serverextension enable --py jupyterlab_templates
 
+# Add git support
+RUN pip install --upgrade jupyterlab-git
+RUN jupyter lab build
+
 # Add Git support
 #RUN pip install jupyterlab-git
 #RUN jupyter labextension install @jupyterlab/git

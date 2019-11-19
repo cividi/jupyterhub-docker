@@ -28,12 +28,9 @@ RUN jupyter serverextension enable --py jupyterlab_templates
 
 # Add git support
 RUN pip install --upgrade jupyterlab-git
+RUN jupyter labextension install @jupyterlab/git
+RUN jupyter serverextension enable --py --sys-prefix jupyterlab_git
 RUN jupyter lab build -y --debug --no-browser
-
-# Add Git support
-#RUN pip install jupyterlab-git
-#RUN jupyter labextension install @jupyterlab/git
-#RUN jupyter serverextension enable --py --sys-prefix jupyterlab_git
 
 # Add JS support
 RUN npm install -g ijavascript

@@ -1,1 +1,1 @@
-docker build --rm -t jupyter/smartuse-datascience .
+docker build --rm -t ghcr.io/cividi/datascience-base:20220326 .

@@ -49,3 +49,19 @@ RUN pip install jupyterlab-s3-browser
 RUN jupyter server extension enable --py jupyterlab_s3_browser
 
 RUN jupyter lab build -y --debug
+
+# Geo tools
+RUN pip install osmnx
+
+USER root
+
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
+RUN apt-get install -y gdal-bin
+RUN apt-get install -y libgdal-dev
+# RUN export CPLUS_INCLUDE_PATH=/usr/include/gdal
+# RUN export C_INCLUDE_PATH=/usr/include/gdal
+# RUN pip install GDAL
+
+USER 1000
